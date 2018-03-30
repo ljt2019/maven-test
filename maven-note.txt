@@ -1,0 +1,112 @@
+14520171202
+
+1、什么是Maven: 管理整个项目的生命周期及管理库文件，构建项目【消除---->编译---->测试---->打包】
+
+   Maven是基于项目对象模型(POM project object model)，可以通过一小段描述信息（配置）来管理项目的构建，报告和文档的软件项目管理工具[百度百科]
+
+2、如何核心管理项目？
+
+   配置一个核心文件：pom.xml
+
+3、如何使用Maven
+
+   1)、下载地址：http://maven.apache.org/download.cgi
+
+   2)、配置环境变量（略）
+
+   3)、测试是否可用 mvn -version
+
+4、在setting.xml文件中配置maven的仓库
+
+   1)、中央仓库【Maven内置了远程公用仓库：http://repo1.maven.org/maven2】(最后考虑)
+      <!--配置中央仓库地址-->
+      <profile>
+        <id>central</id>
+        <repositories>
+          <repository>
+            <id>Central</id>
+            <name>Central</name>
+            <url>http://repo1.maven.org/maven2/</url>
+            <releases>
+              <enabled>true</enabled>
+            </releases>
+            <snapshots>
+              <enabled>true</enabled>
+            </snapshots>
+          </repository>
+        </repositories>
+      </profile>
+
+   2)、考虑网速问题，改为用阿里云私服中央仓库(次优先)
+      <mirror>
+        <id>alimaven</id>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <mirrorOf>central</mirrorOf>
+      </mirror>
+
+   3)、本地仓库(优先从本地仓库加载)
+      <localRepository>D:\mavenlib\repository</localRepository>
+
+5、如何通过maven工具，创建java工程，利用构建插件
+
+   1)、格式非常严紧（命令行模式）
+
+   2)、maven java工程
+
+mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger.controller -DartifactId=maven001 -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=0.0.1-snapshot
+
+   3)、maven web工程
+
+mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -DartifactId=tianti-web -DarchetypeArtifactId=maven-archetype-webapp -Dversion=0.0.1-snapshot
+
+   2)、利用idea工具
+
+6、maven坐标【通过以下三个属性定位一个jar包】
+
+   1)、groupId：组名（包名，也就是域名的反写）
+
+   2)、artifactId：项目名
+
+   3)、version：版本
+
+7、maven java项目结构
+
+   1)、src/main/java —— 存放项目的.java 文件（开发源代码）
+
+   2)、src/main/resources —— 存放项目配置文件(资源文件)，如果没有配置文件该目录可无，如spring, hibernate 配置文件
+
+   3)、src/main/webapp —— 存放 web 项目资源文件（web 项目才有）
+
+   4)、src/test/java —— 存放所有测试.java 文件（测试源代码）
+
+   5)、src/test/resources —— 测试配置文件，如果没有配置文件该目录可无 
+
+   6)、target —— 项目输出位置（可无） 
+
+   7)、pom.xml——maven 项目核心配置文件
+
+9、配置pom.xml文件
+   
+   1)、网站：http://mavenrepository.com/
+
+   2)、在此网站中查找对于的jar文件的坐标，复制到<dependencies/>标签下
+
+10、命令操作maven java或web项目，静茹项目根目录下
+
+   1)、编译：mvn compile　　	--src/main/java目录java源码编译生成class （target目录下）
+
+   2)、测试：mvn test　　　　	--src/test/java 目录编译
+
+   3)、清理：mvn clean　　　	--删除target目录，也就是将class文件等删除
+
+   4)、打包：mvn package　　	--生成压缩文件(项目打包)：java项目#jar包；web项目#war包，也是放在target目录下
+
+   5)、安装：mvn install　　　	--将压缩文件(jar或者war)上传到本地仓库（生成的war可以拷贝到Tomcat的webapps目录下运行）
+
+   6)、部署|发布：mvn deploy　　--将压缩文件上传私服
+   
+11、在eclipse中创建maven project 
+
+   web.xml 改造为3.1版本【修改..\maven-web\.settings\org.eclipse.wst.common.project.facet.core.xml】，在project facets可以查看
+   此外还需要更改jdk版本为1.8，默认为1.5的
