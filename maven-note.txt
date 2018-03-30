@@ -1,25 +1,25 @@
 14520171202
 
-1¡¢Ê²Ã´ÊÇMaven: ¹ÜÀíÕû¸öÏîÄ¿µÄÉúÃüÖÜÆÚ¼°¹ÜÀí¿âÎÄ¼ş£¬¹¹½¨ÏîÄ¿¡¾Ïû³ı---->±àÒë---->²âÊÔ---->´ò°ü¡¿
+1ã€ä»€ä¹ˆæ˜¯Maven: ç®¡ç†æ•´ä¸ªé¡¹ç›®çš„ç”Ÿå‘½å‘¨æœŸåŠç®¡ç†åº“æ–‡ä»¶ï¼Œæ„å»ºé¡¹ç›®ã€æ¶ˆé™¤---->ç¼–è¯‘---->æµ‹è¯•---->æ‰“åŒ…ã€‘
 
-   MavenÊÇ»ùÓÚÏîÄ¿¶ÔÏóÄ£ĞÍ(POM project object model)£¬¿ÉÒÔÍ¨¹ıÒ»Ğ¡¶ÎÃèÊöĞÅÏ¢£¨ÅäÖÃ£©À´¹ÜÀíÏîÄ¿µÄ¹¹½¨£¬±¨¸æºÍÎÄµµµÄÈí¼şÏîÄ¿¹ÜÀí¹¤¾ß[°Ù¶È°Ù¿Æ]
+   Mavenæ˜¯åŸºäºé¡¹ç›®å¯¹è±¡æ¨¡å‹(POM project object model)ï¼Œå¯ä»¥é€šè¿‡ä¸€å°æ®µæè¿°ä¿¡æ¯ï¼ˆé…ç½®ï¼‰æ¥ç®¡ç†é¡¹ç›®çš„æ„å»ºï¼ŒæŠ¥å‘Šå’Œæ–‡æ¡£çš„è½¯ä»¶é¡¹ç›®ç®¡ç†å·¥å…·[ç™¾åº¦ç™¾ç§‘]
 
-2¡¢ÈçºÎºËĞÄ¹ÜÀíÏîÄ¿£¿
+2ã€å¦‚ä½•æ ¸å¿ƒç®¡ç†é¡¹ç›®ï¼Ÿ
 
-   ÅäÖÃÒ»¸öºËĞÄÎÄ¼ş£ºpom.xml
+   é…ç½®ä¸€ä¸ªæ ¸å¿ƒæ–‡ä»¶ï¼špom.xml
 
-3¡¢ÈçºÎÊ¹ÓÃMaven
+3ã€å¦‚ä½•ä½¿ç”¨Maven
 
-   1)¡¢ÏÂÔØµØÖ·£ºhttp://maven.apache.org/download.cgi
+   1)ã€ä¸‹è½½åœ°å€ï¼šhttp://maven.apache.org/download.cgi
 
-   2)¡¢ÅäÖÃ»·¾³±äÁ¿£¨ÂÔ£©
+   2)ã€é…ç½®ç¯å¢ƒå˜é‡ï¼ˆç•¥ï¼‰
 
-   3)¡¢²âÊÔÊÇ·ñ¿ÉÓÃ mvn -version
+   3)ã€æµ‹è¯•æ˜¯å¦å¯ç”¨ mvn -version
 
-4¡¢ÔÚsetting.xmlÎÄ¼şÖĞÅäÖÃmavenµÄ²Ö¿â
+4ã€åœ¨setting.xmlæ–‡ä»¶ä¸­é…ç½®mavençš„ä»“åº“
 
-   1)¡¢ÖĞÑë²Ö¿â¡¾MavenÄÚÖÃÁËÔ¶³Ì¹«ÓÃ²Ö¿â£ºhttp://repo1.maven.org/maven2¡¿(×îºó¿¼ÂÇ)
-      <!--ÅäÖÃÖĞÑë²Ö¿âµØÖ·-->
+   1)ã€ä¸­å¤®ä»“åº“ã€Mavenå†…ç½®äº†è¿œç¨‹å…¬ç”¨ä»“åº“ï¼šhttp://repo1.maven.org/maven2ã€‘(æœ€åè€ƒè™‘)
+      <!--é…ç½®ä¸­å¤®ä»“åº“åœ°å€-->
       <profile>
         <id>central</id>
         <repositories>
@@ -37,7 +37,7 @@
         </repositories>
       </profile>
 
-   2)¡¢¿¼ÂÇÍøËÙÎÊÌâ£¬¸ÄÎªÓÃ°¢ÀïÔÆË½·şÖĞÑë²Ö¿â(´ÎÓÅÏÈ)
+   2)ã€è€ƒè™‘ç½‘é€Ÿé—®é¢˜ï¼Œæ”¹ä¸ºç”¨é˜¿é‡Œäº‘ç§æœä¸­å¤®ä»“åº“(æ¬¡ä¼˜å…ˆ)
       <mirror>
         <id>alimaven</id>
         <name>aliyun maven</name>
@@ -45,68 +45,68 @@
         <mirrorOf>central</mirrorOf>
       </mirror>
 
-   3)¡¢±¾µØ²Ö¿â(ÓÅÏÈ´Ó±¾µØ²Ö¿â¼ÓÔØ)
+   3)ã€æœ¬åœ°ä»“åº“(ä¼˜å…ˆä»æœ¬åœ°ä»“åº“åŠ è½½)
       <localRepository>D:\mavenlib\repository</localRepository>
 
-5¡¢ÈçºÎÍ¨¹ımaven¹¤¾ß£¬´´½¨java¹¤³Ì£¬ÀûÓÃ¹¹½¨²å¼ş
+5ã€å¦‚ä½•é€šè¿‡mavenå·¥å…·ï¼Œåˆ›å»ºjavaå·¥ç¨‹ï¼Œåˆ©ç”¨æ„å»ºæ’ä»¶
 
-   1)¡¢¸ñÊ½·Ç³£ÑÏ½ô£¨ÃüÁîĞĞÄ£Ê½£©
+   1)ã€æ ¼å¼éå¸¸ä¸¥ç´§ï¼ˆå‘½ä»¤è¡Œæ¨¡å¼ï¼‰
 
-   2)¡¢maven java¹¤³Ì
+   2)ã€maven javaå·¥ç¨‹
 
 mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger.controller -DartifactId=maven001 -DarchetypeArtifactId=maven-archetype-quickstart -Dversion=0.0.1-snapshot
 
-   3)¡¢maven web¹¤³Ì
+   3)ã€maven webå·¥ç¨‹
 
 mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -DartifactId=tianti-web -DarchetypeArtifactId=maven-archetype-webapp -Dversion=0.0.1-snapshot
 
-   2)¡¢ÀûÓÃidea¹¤¾ß
+   2)ã€åˆ©ç”¨ideaå·¥å…·
 
-6¡¢maven×ø±ê¡¾Í¨¹ıÒÔÏÂÈı¸öÊôĞÔ¶¨Î»Ò»¸öjar°ü¡¿
+6ã€mavenåæ ‡ã€é€šè¿‡ä»¥ä¸‹ä¸‰ä¸ªå±æ€§å®šä½ä¸€ä¸ªjaråŒ…ã€‘
 
-   1)¡¢groupId£º×éÃû£¨°üÃû£¬Ò²¾ÍÊÇÓòÃûµÄ·´Ğ´£©
+   1)ã€groupIdï¼šç»„åï¼ˆåŒ…åï¼Œä¹Ÿå°±æ˜¯åŸŸåçš„åå†™ï¼‰
 
-   2)¡¢artifactId£ºÏîÄ¿Ãû
+   2)ã€artifactIdï¼šé¡¹ç›®å
 
-   3)¡¢version£º°æ±¾
+   3)ã€versionï¼šç‰ˆæœ¬
 
-7¡¢maven javaÏîÄ¿½á¹¹
+7ã€maven javaé¡¹ç›®ç»“æ„
 
-   1)¡¢src/main/java ¡ª¡ª ´æ·ÅÏîÄ¿µÄ.java ÎÄ¼ş£¨¿ª·¢Ô´´úÂë£©
+   1)ã€src/main/java â€”â€” å­˜æ”¾é¡¹ç›®çš„.java æ–‡ä»¶ï¼ˆå¼€å‘æºä»£ç ï¼‰
 
-   2)¡¢src/main/resources ¡ª¡ª ´æ·ÅÏîÄ¿ÅäÖÃÎÄ¼ş(×ÊÔ´ÎÄ¼ş)£¬Èç¹ûÃ»ÓĞÅäÖÃÎÄ¼ş¸ÃÄ¿Â¼¿ÉÎŞ£¬Èçspring, hibernate ÅäÖÃÎÄ¼ş
+   2)ã€src/main/resources â€”â€” å­˜æ”¾é¡¹ç›®é…ç½®æ–‡ä»¶(èµ„æºæ–‡ä»¶)ï¼Œå¦‚æœæ²¡æœ‰é…ç½®æ–‡ä»¶è¯¥ç›®å½•å¯æ— ï¼Œå¦‚spring, hibernate é…ç½®æ–‡ä»¶
 
-   3)¡¢src/main/webapp ¡ª¡ª ´æ·Å web ÏîÄ¿×ÊÔ´ÎÄ¼ş£¨web ÏîÄ¿²ÅÓĞ£©
+   3)ã€src/main/webapp â€”â€” å­˜æ”¾ web é¡¹ç›®èµ„æºæ–‡ä»¶ï¼ˆweb é¡¹ç›®æ‰æœ‰ï¼‰
 
-   4)¡¢src/test/java ¡ª¡ª ´æ·ÅËùÓĞ²âÊÔ.java ÎÄ¼ş£¨²âÊÔÔ´´úÂë£©
+   4)ã€src/test/java â€”â€” å­˜æ”¾æ‰€æœ‰æµ‹è¯•.java æ–‡ä»¶ï¼ˆæµ‹è¯•æºä»£ç ï¼‰
 
-   5)¡¢src/test/resources ¡ª¡ª ²âÊÔÅäÖÃÎÄ¼ş£¬Èç¹ûÃ»ÓĞÅäÖÃÎÄ¼ş¸ÃÄ¿Â¼¿ÉÎŞ 
+   5)ã€src/test/resources â€”â€” æµ‹è¯•é…ç½®æ–‡ä»¶ï¼Œå¦‚æœæ²¡æœ‰é…ç½®æ–‡ä»¶è¯¥ç›®å½•å¯æ—  
 
-   6)¡¢target ¡ª¡ª ÏîÄ¿Êä³öÎ»ÖÃ£¨¿ÉÎŞ£© 
+   6)ã€target â€”â€” é¡¹ç›®è¾“å‡ºä½ç½®ï¼ˆå¯æ— ï¼‰ 
 
-   7)¡¢pom.xml¡ª¡ªmaven ÏîÄ¿ºËĞÄÅäÖÃÎÄ¼ş
+   7)ã€pom.xmlâ€”â€”maven é¡¹ç›®æ ¸å¿ƒé…ç½®æ–‡ä»¶
 
-9¡¢ÅäÖÃpom.xmlÎÄ¼ş
+9ã€é…ç½®pom.xmlæ–‡ä»¶
    
-   1)¡¢ÍøÕ¾£ºhttp://mavenrepository.com/
+   1)ã€ç½‘ç«™ï¼šhttp://mavenrepository.com/
 
-   2)¡¢ÔÚ´ËÍøÕ¾ÖĞ²éÕÒ¶ÔÓÚµÄjarÎÄ¼şµÄ×ø±ê£¬¸´ÖÆµ½<dependencies/>±êÇ©ÏÂ
+   2)ã€åœ¨æ­¤ç½‘ç«™ä¸­æŸ¥æ‰¾å¯¹äºçš„jaræ–‡ä»¶çš„åæ ‡ï¼Œå¤åˆ¶åˆ°<dependencies/>æ ‡ç­¾ä¸‹
 
-10¡¢ÃüÁî²Ù×÷maven java»òwebÏîÄ¿£¬¾²ÈãÏîÄ¿¸ùÄ¿Â¼ÏÂ
+10ã€å‘½ä»¤æ“ä½œmaven javaæˆ–webé¡¹ç›®ï¼Œé™èŒ¹é¡¹ç›®æ ¹ç›®å½•ä¸‹
 
-   1)¡¢±àÒë£ºmvn compile¡¡¡¡	--src/main/javaÄ¿Â¼javaÔ´Âë±àÒëÉú³Éclass £¨targetÄ¿Â¼ÏÂ£©
+   1)ã€ç¼–è¯‘ï¼šmvn compileã€€ã€€	--src/main/javaç›®å½•javaæºç ç¼–è¯‘ç”Ÿæˆclass ï¼ˆtargetç›®å½•ä¸‹ï¼‰
 
-   2)¡¢²âÊÔ£ºmvn test¡¡¡¡¡¡¡¡	--src/test/java Ä¿Â¼±àÒë
+   2)ã€æµ‹è¯•ï¼šmvn testã€€ã€€ã€€ã€€	--src/test/java ç›®å½•ç¼–è¯‘
 
-   3)¡¢ÇåÀí£ºmvn clean¡¡¡¡¡¡	--É¾³ıtargetÄ¿Â¼£¬Ò²¾ÍÊÇ½«classÎÄ¼şµÈÉ¾³ı
+   3)ã€æ¸…ç†ï¼šmvn cleanã€€ã€€ã€€	--åˆ é™¤targetç›®å½•ï¼Œä¹Ÿå°±æ˜¯å°†classæ–‡ä»¶ç­‰åˆ é™¤
 
-   4)¡¢´ò°ü£ºmvn package¡¡¡¡	--Éú³ÉÑ¹ËõÎÄ¼ş(ÏîÄ¿´ò°ü)£ºjavaÏîÄ¿#jar°ü£»webÏîÄ¿#war°ü£¬Ò²ÊÇ·ÅÔÚtargetÄ¿Â¼ÏÂ
+   4)ã€æ‰“åŒ…ï¼šmvn packageã€€ã€€	--ç”Ÿæˆå‹ç¼©æ–‡ä»¶(é¡¹ç›®æ‰“åŒ…)ï¼šjavaé¡¹ç›®#jaråŒ…ï¼›webé¡¹ç›®#waråŒ…ï¼Œä¹Ÿæ˜¯æ”¾åœ¨targetç›®å½•ä¸‹
 
-   5)¡¢°²×°£ºmvn install¡¡¡¡¡¡	--½«Ñ¹ËõÎÄ¼ş(jar»òÕßwar)ÉÏ´«µ½±¾µØ²Ö¿â£¨Éú³ÉµÄwar¿ÉÒÔ¿½±´µ½TomcatµÄwebappsÄ¿Â¼ÏÂÔËĞĞ£©
+   5)ã€å®‰è£…ï¼šmvn installã€€ã€€ã€€	--å°†å‹ç¼©æ–‡ä»¶(jaræˆ–è€…war)ä¸Šä¼ åˆ°æœ¬åœ°ä»“åº“ï¼ˆç”Ÿæˆçš„warå¯ä»¥æ‹·è´åˆ°Tomcatçš„webappsç›®å½•ä¸‹è¿è¡Œï¼‰
 
-   6)¡¢²¿Êğ|·¢²¼£ºmvn deploy¡¡¡¡--½«Ñ¹ËõÎÄ¼şÉÏ´«Ë½·ş
+   6)ã€éƒ¨ç½²|å‘å¸ƒï¼šmvn deployã€€ã€€--å°†å‹ç¼©æ–‡ä»¶ä¸Šä¼ ç§æœ
    
-11¡¢ÔÚeclipseÖĞ´´½¨maven project 
+11ã€åœ¨eclipseä¸­åˆ›å»ºmaven project 
 
-   web.xml ¸ÄÔìÎª3.1°æ±¾¡¾ĞŞ¸Ä..\maven-web\.settings\org.eclipse.wst.common.project.facet.core.xml¡¿£¬ÔÚproject facets¿ÉÒÔ²é¿´
-   ´ËÍâ»¹ĞèÒª¸ü¸Äjdk°æ±¾Îª1.8£¬Ä¬ÈÏÎª1.5µÄ
+   web.xml æ”¹é€ ä¸º3.1ç‰ˆæœ¬ã€ä¿®æ”¹..\maven-web\.settings\org.eclipse.wst.common.project.facet.core.xmlã€‘ï¼Œåœ¨project facetså¯ä»¥æŸ¥çœ‹
+   æ­¤å¤–è¿˜éœ€è¦æ›´æ”¹jdkç‰ˆæœ¬ä¸º1.8ï¼Œé»˜è®¤ä¸º1.5çš„
