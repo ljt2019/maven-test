@@ -64,9 +64,9 @@ mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -Dartifac
 
 6、maven坐标【通过以下三个属性定位一个jar包】
 
-   1)、groupId：组名（包名，也就是域名的反写）
+   1)、groupId：组名（包名，也就是域名的反写）【com.tiger.project_name】
 
-   2)、artifactId：项目名
+   2)、artifactId：项目名-模块名【project_name-model】
 
    3)、version：版本
 
