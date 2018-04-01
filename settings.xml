@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<!--本地仓库，首先搜索本地仓库 -->
+	<localRepository>D:\mavenlib\repository</localRepository>
+
+	<!-- 阿里云私服(次优先)，本地仓库没有从私服下载 -->
+	<mirrors>
+		<mirror>
+			<id>alimaven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+	</mirrors>
+
+	<!-- 中央仓库地址，本地和私服都无法取得，从中央仓库下拉 -->
+	<profiles>
+		<profile>
+			<id>central</id>
+			<repositories>
+				<repository>
+					<id>Central</id>
+					<name>Central</name>
+					<url>http://repo1.maven.org/maven2/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+		<!-- 设置jdk版本 -->
+		<profile>
+			<id>jdk-1.8</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<jdk>1.8</jdk>
+			</activation>
+			<properties>
+				<maven.compile.source>1.8</maven.compile.source>
+				<maven.compile.target>1.8</maven.compile.target>
+				<maven.compile.compileVersion>1.8</maven.compile.compileVersion>
+			</properties>
+		</profile>
+	</profiles>
+
+	<pluginGroups></pluginGroups>
+
+	<proxies>
+
+	</proxies>
+
+	<servers></servers>
+</settings>
