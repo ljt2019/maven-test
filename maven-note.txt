@@ -16,7 +16,7 @@
 
    3)、测试是否可用 mvn -version
 
-4、在setting.xml文件中配置maven的仓库
+4、在setting.xml文件中配置maven的仓库【将setting文件复制一份到本地仓库目录下，这样以后修改maven版本就不需要重新设置】
 
    1)、中央仓库【Maven内置了远程公用仓库：http://repo1.maven.org/maven2】(最后考虑)
       <!--配置中央仓库地址-->
