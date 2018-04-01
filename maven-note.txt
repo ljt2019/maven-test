@@ -16,7 +16,7 @@
 
    3)、测试是否可用 mvn -version
 
-4、在setting.xml文件中配置maven的仓库【将setting文件复制一份到本地仓库目录下，这样以后修改maven版本就不需要重新设置】
+4、在setting.xml文件中配置maven的仓库【将setting文件复制一份到本地仓库目录下，这样以后修改maven版本就不需要重新设置，在eclipse中设置的就是lib中的setting文件】
 
    1)、中央仓库【Maven内置了远程公用仓库：http://repo1.maven.org/maven2】(最后考虑)
       <!--配置中央仓库地址-->
@@ -94,11 +94,11 @@ mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -Dartifac
 
 10、命令操作maven java或web项目，静茹项目根目录下
 
-   1)、编译：mvn compile　　	--src/main/java目录java源码编译生成class （target目录下）
+   1)、清理：mvn clean　　　	--删除target目录，也就是将class文件等删除
 
-   2)、测试：mvn test　　　　	--src/test/java 目录编译
+   2)、编译：mvn compile　　	--src/main/java目录java源码编译生成class （target目录下）
 
-   3)、清理：mvn clean　　　	--删除target目录，也就是将class文件等删除
+   3)、测试：mvn test　　　　	--src/test/java 目录编译
 
    4)、打包：mvn package　　	--生成压缩文件(项目打包)：java项目#jar包；web项目#war包，也是放在target目录下
 
@@ -110,3 +110,28 @@ mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -Dartifac
 
    web.xml 改造为3.1版本【修改..\maven-web\.settings\org.eclipse.wst.common.project.facet.core.xml】，在project facets可以查看
    此外还需要更改jdk版本为1.8，默认为1.5的
+   
+12、maven生命周期【三套生命周期相互独立，顺序执行，执行后面时，前面会自动执行】
+
+   1)、clean：清理项目
+      (1)、pre-clean：执行清理前的工作
+      (2)、clean：清理上一次构建生成的所有文件
+      (3)、post-clean：执行清理后的文件
+
+   2)、default：构建项目（最核心）
+      (1)、compile：编译
+	  (2)、test：测试
+	  (3)、package：打包
+	  (4)、install：部署/发布
+
+   3)、site：生成站点
+      (1)、pre-site：在生成站点项目前要完成的工作
+      (2)、site：生成项目的站点文档
+      (3)、post-site：生成项目站点后要完成的工作
+      (4)、site-deploy：发布生成的站点到服务器上	  
+
+13、maven插件：http://maven.apache.org/plugins/index.html
+
+   1)、所有命令都是调用插件实现
+   
+   2)、
