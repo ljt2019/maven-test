@@ -135,3 +135,11 @@ mvn archetype:generate -DarchetypeCatalog=internal -DgroupId=com.tiger -Dartifac
    1)、所有命令都是调用插件实现
    
    2)、
+   
+14、依赖冲突解决方案：
+
+   1)、短路优先
+      (1)、A - B - C - X(jar)
+      (2)、A - D - X(jar)【优先选择短路线】
+   
+   2)、先声明则优先
