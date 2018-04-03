@@ -1,0 +1,38 @@
+
+1、Jetty更满足公有云的分布式环境的需求【相较于tomcat更为轻量】，而Tomcat更符合企业级环境。
+
+2、使用jetty、tomcat插件运行web项目，maven pom文件的设置如下
+	<build>
+		<finalName>webapp</finalName>
+		<plugins>
+			<plugin>
+				<!-- jetty插件坐标 -->
+				<!-- <groupId>org.mortbay.jetty</groupId> -->
+				<!-- <artifactId>jetty-maven-plugin</artifactId> -->
+				<!-- <version>8.1.16.v20140903</version> -->
+				<!-- tomcat插件坐标 -->
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<!-- 在打包成功后使用jetty:run来运行jetty服务 -->
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+mvn jetty:run命令就能直接启动
+clean package【<executions>在package阶段运行服务】
+-----------------------------------------------------------------------------------------
+
+注：
+maven中用plugin的方式使用jetty，需修改setting.xml文件，才可以使用命令mvn jetty:run。
+在setting.xml中找到标签<pluginGroups>，增加：<pluginGroup>org.mortbay.jetty</pluginGroup>
+
+Web Deployment Assembly 中不需要讲测试文件发布上去，有则删除。
